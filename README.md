@@ -4,4 +4,4 @@ Slides om Datavisualisering: https://bekk.github.io/dataviz-kurs-sommer-18/om-da
 
 Slides om D3: https://bekk.github.io/dataviz-kurs-sommer-18/om-d3.html
 
-Oppgavene: https://github.com/bekk/dataviz-kurs-sommer-18/tree/master/oppgaver
+Oppgavene: https://github.com/bekk/intro-til-d3/tree/master/oppgaver
