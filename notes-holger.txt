@@ -1,0 +1,27 @@
+TODO:
+    Nummerer hiearchy-mappen
+
+    Ikke bruk css for å style i hierarchy. Bruk svg i stedet. Det blir vanskelig å copy-paste koden
+
+    Oppdater readme med lerna-måten å bygge alle på, i stedet for å bygge hver enkelt
+
+    1-table-oppgaven: select(tr) velger jo også første th-raden
+
+    stian sine oppgaver har fasiten i seg
+        Lag suboppgaver i stians oppgaver, med delmål
+
+    Mangler readme på steamgraph og scatterplot
+
+    Tilbakemelding fra Esben:
+        Kunne hatt en oppgave 0 som ble tatt i plenum før man begynte å jobbe. Lærer gjerne mer av flyten ved livekoding enn ved kodeeksempler
+
+        F.eks. undertegnede skjønte ikke helt hva som skjedde ved selectAll("something").data(data), og at det var mulig å dra dette ut i en konstant som man kunne gjenbruke til .enter()/.exit() osv.
+
+    Vurder flere slides om d3-modules:
+        D3 sine essensielle modules
+            Selection
+            Transitions
+            Axes
+            Scale
+            Hierarchy
+            ... (finn ut hvilke som er viktige for oppgavene)

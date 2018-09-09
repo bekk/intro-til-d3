@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+svg {
+  margin: 2rem;
+}
+
+* {
+  font-family: RobotoLight;
+}
+
+circle {
+  fill: rgb(31, 119, 180);
+  fill-opacity: .25;
+  stroke: rgb(31, 119, 180);
+  stroke-width: 1px;
+}
+
+.leaf circle {
+  fill: #ff7f0e;
+  fill-opacity: 0.5;
+}
+
+text {
+  font: 16px sans-serif;
+  text-anchor: middle;
+  alignment-baseline: middle;
+}
+
+@font-face {font-family: 'RobotoLight'; src: url('Roboto-Light.ttf')}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'}
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-slide-content { padding: 0.5rem 4rem; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content * { font-size: 16px; }
+      .remark-code * { font-size: 12px; }
+      .remark-slide-content img { width: 50%; margin: 1rem 0;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+Tool of choice: D3
+===================
+
+**Hva er D3?**
+
+**Hvordan henger D3 sammen?**
+
+**Hvordan programmerer man D3?**
+
+---
+
+Hva er D3?
+-----------
+
+### Data-Driven Documents ###
+
+* Javascript-rammeverk for datavisualisering
+
+* Ment for 2D på web
+
+* Bygger på etablerte HTML5-standarder
+
+* Stabilt, populært, stor community
+
+* Lavnivås rammeverk
+    * Mer arbeid
+    * Frihet til å gjøre noe originalt
+
+![D3 examples](img/d3-examples.jpg)
+
+---
+
+Hvordan henger D3 sammen?
+--------------------------
+
+### DATA-driven documents ###
+
+JSON
+
+~~~javascript
+[
+    { name:"Ireland", income:53000, life: 78, pop:6378, color: "black" },
+    { name:"Norway", income:73000, life: 87, pop:5084, color: "blue" },
+    { name:"Tanzania", income:27000, life: 50, pop:3407, color: "grey" }
+]
+~~~
+
+CSV
+
+
+~~~
+  id,firstname,lastname,age
+  1,holger,ludvigsen,31
+  2,arne,bakke olsen,47
+  3,bjarne,tellefsen,25
+  4,hanne-lise,severinsen,28
+~~~
+
+(pluss pluss pluss)
+
+---
+
+### data-driven DOCUMENTS ###
+
+HTML
+
+~~~xml
+<html>
+    <body>
+        <div>
+            <p>...</p>
+
+            <table>
+                <tr><td>...</td><td>...</td></tr>
+                <tr><td>...</td><td>...</td></tr>
+            </table>
+
+            <svg>
+                ...
+            </svg>
+        </div>
+    </body>
+</html>
+~~~
+
+SVG
+
+~~~xml
+<svg height="100" width="500">
+    <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:yellow" />
+    <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:black" />
+</svg>
+~~~
+
+CSS
+
+~~~css
+h1 {
+    color: blue;
+}
+
+svg:hover ellipse {
+    fill: red;
+}
+~~~
+
+---
+
+### data-DRIVEN documents ###
+
+~~~javascript
+[
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+~~~
+
+&#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681;
+
+~~~html
+<svg height="300" width="600">
+    <circle cx="100" cy="150" r="64" style="fill:green" />
+    <circle cx="220" cy="150" r="34" style="fill:orange" />
+    <circle cx="340" cy="150" r="51" style="fill:red" />
+</svg>
+~~~
+
+&#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681;
+
+![SVG result](img/svg-example.png)
+
+*rinse & repeat*
+
+---
+
+Hvordan programmerer man i D3?
+-------------------------------
+
+Man tager noe data og et dokument:
+
+~~~javascript
+const data = const data = [
+  {name: "a", value: 5}, 
+  ...
+  {name: "z", value: 7}
+];
+
+<svg id="minSVG" width="600" height="300"> </svg>
+~~~
+
+Joiner dataene til hvert sitt (hypotetiske) element:
+
+~~~javascript
+const circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, (d) => d.name); // data(array, keyFunction)
+~~~
+
+Oppretter og definerer hvert element utifra data:
+
+~~~javascript
+circles
+  .enter()
+  .append("circle") // legger til en <circle>
+  .style("fill", "#ff8800")
+  .attr("cx", (d, i) => 50 + i * 40)
+  .attr("cy", 150)
+  .attr("r", (d, i) => d.value * 3);
+~~~
+
+Resultat:
+
+![SVG result](img/svg-example2.png)
+
+---
+
+Live endring av dataene
+------------------------
+
+Hvis datasamlingen endrer seg
+
+* nye verdier
+* endring av verdier
+* fjerning av verdier
+
+Så animerer vi dette med "General Update Pattern"
+* join (koble til data)
+* enter (nye data)
+* update (data som var der fra før)
+* exit (data som er borte)
+
+Sammen med `.transition()` for animasjon
+
+---
+
+General Update Pattern
+-----------------------
+
+**join, enter, update, exit**
+
+Join og enter har vi allerede sett:
+
+~~~javascript
+const circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, (d) => d.name); // data(array, keyFunction)
+~~~
+
+~~~javascript
+circles
+  .enter()
+  .append("circle") // legger til en <circle>
+  .style("fill", "#ff8800")
+  .attr("cx", (d, i) => 50 + i * 40)
+  .attr("cy", 150)
+  .attr("r", (d, i) => d.value * 3);
+~~~
+
+Update er **uten** `.enter()`:
+
+~~~javascript
+circles
+  .transition()
+  .attr("cx", (d, i) => 50 + i * 40)
+  .attr("r", (d, i) => d.value * 3);
+~~~
+
+Exit er med `.exit()`:
+
+~~~javascript
+circles
+  .exit()
+  .transition()
+  .attr("r", 0)
+  .remove();
+~~~
+
+---
+
+Hands on
+---------
+
+**Oppgaver:** https://github.com/bekk/dataviz-kurs-sommer-18
+
+* Hver oppgave er en selvstendig mappe med `README.md` og fasit
+
+* Start med nr 1, følg readme
+
+* Instruktørene kommer til å gå gjennom løsningen på de første oppgavene etter passende tid
+
+* Det man ikke rekker kan man gjøre alene senere
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"> </script>
+    <script>var slideshow = remark.create();</script>
+  </body>
+</html>
+

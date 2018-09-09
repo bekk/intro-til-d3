@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  font-family: RobotoLight;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: #e1e1e1;
+}
+
+td.number {
+  text-align: right;
+}
+
+th {
+  background-color: #c1c1c1;
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url("Roboto-Light.ttf");
+}
