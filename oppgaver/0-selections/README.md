@@ -56,7 +56,7 @@ Boilerplate-koden som trengs for å få bygd en d3-visualisering i nettleseren e
 
 # Oppgaver
 
-Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre stylingen på følgende html.
+Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre stylingen på følgende html med `.style()`-metoden.
 
 ```html
 <body>
@@ -66,6 +66,12 @@ Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre styling
   <p class="paragraph" id="paragraph">Paragraph med unik id og klasse</p>
   <p class="paragraph">Paragraph med klasse</p>
 </body>
+```
+
+`.style()` tar to argumenter og må bli kalt på en selection. Første argument er css-verdien som skal endres og andre argument er den faktiske verdien.
+
+```javascript
+selection.style("CSS Style string", new value());
 ```
 
 1. Endre headeren sin tekstfargen til rød.
