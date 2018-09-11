@@ -20,15 +20,9 @@ og få dette resultatet:
 
 Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
 
-## Utdelt oppsett
-
-Boilerplate-koden som trengs for å få bygd en d3-visualisering i nettleseren er allerede satt opp i denne mappen. Du vil mest sannsynlig skrive mesteparten av koden din i `src/index.js` hvor det står `// ENTRY POINT FOR D3`.
-
-Åpne opp `src/index.html` i nettleseren og refresh siden for å se endringene du har gjort.
-
 ## Tips
 
-* D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig HTML-tabell `<table>`
+* D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig ![HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
 
 * For å lage en `<tr>` i tabellen for hvert innslag i dataene gjør man altså:
 
