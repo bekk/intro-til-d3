@@ -73,7 +73,7 @@ Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre styling
 `.style()` tar to argumenter og må bli kalt på en selection. Første argument er css-verdien som skal endres og andre argument er den faktiske verdien.
 
 ```javascript
-selection.style("CSS Style string", new value());
+selection.style("CSS Style string", "value");
 ```
 
 1. Endre headeren sin tekstfargen til rød.
