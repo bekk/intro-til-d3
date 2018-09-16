@@ -123,7 +123,7 @@ Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til
 
 ## Tips
 
-* D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig ![HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
+* D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig [HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
 
 * For å lage en `<tr>` i tabellen for hvert innslag i dataene gjør man altså:
 
