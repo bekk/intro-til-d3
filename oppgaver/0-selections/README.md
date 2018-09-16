@@ -1,4 +1,12 @@
-# d3.select
+# Oppgave 0 - Å velge elementer
+
+## Utdelt oppsett
+
+Boilerplate-koden som trengs for å få bygd en d3-visualisering i nettleseren er allerede satt opp i denne mappen. Du vil mest sannsynlig skrive mesteparten av koden din i `src/index.js` hvor det står `// ENTRY POINT FOR D3`.
+
+Åpne opp `src/index.html` i nettleseren og refresh siden for å se endringene du har gjort.
+
+## d3.select
 
 Å velge elementer er viktig for å programmere med d3, da man ikke kan gjøre så mye uten de. Før man endrer eller modifiserer elementer i d3 må man velge de (derav `select`). Dette kan bli gjort ved å bruke enten `d3.select(this)` eller `d3.selectAll(this)`, hvor `this` er det/de spesifikke elementene du ønsker å velge. `.select()` vil kun velge første forekomst som passer til kriteriet man spesifiserer. `.selectAll()` vil velge alle elementer som passer til kriteriet man spesifiserer og returnere det som et array av elementer.
 
@@ -48,13 +56,7 @@ Hvis man ønsker kan man kombinere flere `select()`. For eksempel, så kan man v
 d3.selectAll(“p”).select(“b”)
 ```
 
-# Utdelt oppsett
-
-Boilerplate-koden som trengs for å få bygd en d3-visualisering i nettleseren er allerede satt opp i denne mappen. Du vil mest sannsynlig skrive mesteparten av koden din i `src/index.js` hvor det står `// ENTRY POINT FOR D3`.
-
-Åpne opp `src/index.html` i nettleseren og refresh siden for å se endringene du har gjort.
-
-# Oppgaver
+## Oppgaver
 
 Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre stylingen på følgende html med `.style()`-metoden.
 
@@ -71,7 +73,7 @@ Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre styling
 `.style()` tar to argumenter og må bli kalt på en selection. Første argument er css-verdien som skal endres og andre argument er den faktiske verdien.
 
 ```javascript
-selection.style("CSS Style string", new value());
+selection.style("CSS Style string", "value");
 ```
 
 1. Endre headeren sin tekstfargen til rød.
