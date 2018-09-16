@@ -20,6 +20,107 @@ og få dette resultatet:
 
 Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
 
+## Data binding
+
+Vanligvis når man ønsker å lagre en verdi i et programmeringspråk blir det gjort ved å tilordne en verdi til en variabel.
+
+Hvis man ønsker å lagre verdiene 1, 2, 3 og 4 i et array initialiserer man variabelen og tilordner verdien på følgende måte:
+
+```javascript
+var myArray = [1, 2, 3, 4];
+```
+
+I d3 lagrer man ikke data i variabeler. Istedenfor lagrer d3 data i DOM selectorer ved å kalle på `selection.data()`-metoden.
+
+`.data()`-metoden må bli kalt på en selection og tar et array av verdier som argument.
+
+```javascript
+selection.data([array]);
+```
+
+Når `.data()` blir kalt slår den sammen arrayet av verdier med arrayet av elementer (selection) som den blir kalt på. Første verdien i arrayet vil bli slått sammen med første element i selection.
+
+> _Et selection vil alltid være et array av elementer. Dette er sant for både `select()` og `selectAll()`_
+
+`.data()` returnerer verdiene fra arrayet som blir gitt som argument. Dette kan man bruke til endre attributer og styling på elementer ved å kjede metoder.
+
+La oss si at vi har fem sirkeler.
+
+```html
+<div id="data_example1">
+  <svg width="375" height="100">
+    <circle id = "myCircle" cx="30" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="100" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="170" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="240" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="310" cy="50" r="30" ></circle>
+  </svg>
+</div>
+```
+
+Og at vi ønsker at sirkelene skal ha radiusen definert i `radiusData`.
+
+```javascript
+const radiusData = [10, 15, 20, 25, 30];
+```
+
+`.data()` vil slå sammen verdiene i `radiusData` med sirklene.
+`.attr()` vil ta de sammenslåtte verdiene og bruke de til å endre på radiusen.
+
+```html
+<div id="data_example1">
+  <svg width="375" height="100">
+    <circle id = "myCircle" cx="30" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="100" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="170" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="240" cy="50" r="30" ></circle>
+    <circle id = "myCircle" cx="310" cy="50" r="30" ></circle>
+  </svg>
+</div>
+<script type="text/javascript">
+  var radiusData = [10, 15, 20, 25, 30];
+  var selectExample = d3.select("#data_example1");
+
+  selectExample.selectAll("circle")
+    .data(radiusData)
+    .attr("r", function(d){return d});
+</script>
+```
+
+## enter og append
+
+I eksempelet over hardkodet vi `circle`-elementene i html. Selvom dette er nyttig til å forklare d3, er det ikke alltid mulig å gjøre endringer i html-koden. Hvis man ønsker å endre sirkelene til andre svg elementer må man gjøre det linje for linje.
+
+Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til DOM. I dette eksempelet vil vi bruke `.enter()` og `.append()` til å legge til `circle`-elementer til DOM.
+
+> _`.append()` kan brukes til å legge til elementer til DOM. Man kan legge til `<p>`, `<div>`, text, `<svg>`-elementer osv._
+
+> _`.enter()` kan kun bli brukt etter et `.data()`-kall og brukes til å indikere at nye elementer vil bli lagt til i nåværende selection. Et `.append()` eller `.insert()`-kall følger alltid et `.enter()`-kall_
+
+```html
+<div id="data_example"></div>
+<script type="text/javascript">
+  var circleData = [10, 15, 20, 25, 30];
+
+  // Legger til et svg-element
+  var selectDiv = d3.select("#data_example")
+   .append("svg:svg")
+   .attr("width", circleData.length * 100)
+   .attr("height", 100);
+
+  // Legger til en sirkel for hvert element i circleData
+  selectDiv.selectAll("circle")
+   .data(circleData) // Binder data
+   .enter()
+ .append("circle")                          // Legger til sirkel
+   .attr("cx", function(d){return d[0]*14}) // x-posisjon
+   .attr("cy", 50)                          // y-posisjon
+   .attr("r", function(d){return d[0]})     // radius fra circleData
+   .style("fill", "black");
+
+</script>
+```
+
 ## Tips
 
 * D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig ![HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
