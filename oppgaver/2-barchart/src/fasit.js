@@ -5,6 +5,7 @@ const yScale = d3
 
 d3.select(svg).style("background-color", "#d1d1d1");
 
+// Legg til et rect for hvert element i data
 d3
   .select(svg)
   .selectAll("rect")
@@ -15,6 +16,7 @@ d3
 const barWidth = 50;
 const barMargin = 2;
 
+// Legger til søyler
 d3
   .select(svg)
   .selectAll("rect")

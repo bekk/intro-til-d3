@@ -29,6 +29,16 @@ th {
   background-color: #c1c1c1;
 }
 
+.tick text {
+  font-size: 1.5rem;
+  transform: translate(-5px, 0);
+}
+
+svg {
+  margin: 2rem;
+  padding: 2rem 4rem;
+}
+
 @font-face {
   font-family: "RobotoLight";
   src: url("Roboto-Light.ttf");
