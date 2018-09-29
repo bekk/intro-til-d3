@@ -1,4 +1,4 @@
-# Dataviz-kurs sommerstudenter 2018
+# Introduksjon til d3.js
 
 Slides om Datavisualisering: https://bekk.github.io/intro-til-d3/om-dataviz.html
 
