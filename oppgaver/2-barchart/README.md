@@ -29,7 +29,7 @@ const graph = d3
 
 :trophy: Disse rektangelene skal du nå få til å se ut som nedenfor ved å bruke `.style()` og `attr()` til å style og sette attributer på hvert rektangel i `graph`.
 
-<img src="../../img/2-barchart1" width="300" />
+<img src="../../img/2-barchart1.png" width="300" />
 
 :bulb: `style()` brukes til å legge til css-verdier på et element
 
@@ -62,4 +62,4 @@ d3
 
 :bulb: Man kan snu en scale ved å gi `.range()` andre verdier.
 
-<img src="../../img/2-barchart2" width="300" />
+<img src="../../img/2-barchart2.png" width="300" />
