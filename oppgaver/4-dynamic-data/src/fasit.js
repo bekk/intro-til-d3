@@ -6,7 +6,7 @@ const t = d3.transition().duration(200);
 
 // JOIN: bind elementer til data
 const circles = d3
-  .select(svg)
+  .select("#svg")
   .selectAll("circle")
   .data(data, d => d.name);
 
@@ -38,7 +38,7 @@ circles
 // join, enter, update, exit for tekster:
 
 const text = d3
-  .select(svg)
+  .select("#svg")
   .selectAll("text")
   .data(data, d => d.name);
 
