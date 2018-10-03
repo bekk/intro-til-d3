@@ -27,6 +27,8 @@ const graph = d3
   .append("rect");
 ```
 
+I stedet for å regne ut posisjonen til alle stolpene for hånd kan man bruke `d3.scaleLinear()` fra modulen `d3-scale`. Alle modulene er godt forklart i sin dokumentasjon: https://github.com/d3/d3-scale#continuous-scales
+
 :trophy: Disse rektangelene skal du nå få til å se ut som nedenfor ved å bruke `.style()` og `attr()` til å style og sette attributer på hvert rektangel i `graph`.
 
 <img src="../../img/2-barchart1.png" width="300" />
@@ -38,8 +40,6 @@ const graph = d3
 ```javascript
 graph.attr("width", "200");
 ```
-
-:bulb: I stedet for å regne ut posisjonen til alle stolpene for hånd kan man bruke `d3.scaleLinear()` fra modulen `d3-scale`. Alle modulene er godt forklart i sin dokumentasjon: https://github.com/d3/d3-scale#continuous-scales
 
 ### Del 2
 
