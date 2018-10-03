@@ -8,6 +8,4 @@ const data = [
   { name: "opal", hardness: 6, color: "black" }
 ];
 
-const table = document.getElementById("table");
-
 // Entrypoint for d3
