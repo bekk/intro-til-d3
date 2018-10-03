@@ -1,12 +1,14 @@
-const yScale = d3
-  .scaleLinear()
-  .domain([0, dataMax])
-  .range([0, height]);
+const data = [5, 10, 1, 3, 2, 1, 4, 2, 7];
+
+const svg = document.getElementById("svg");
+const dataMax = d3.max(data);
+const width = 500;
+const height = 500;
 
 d3.select(svg).style("background-color", "#d1d1d1");
 
-// Legg til et rect for hvert element i data
-d3
+// Legger til et rect for hvert element i data
+const graph = d3
   .select(svg)
   .selectAll("rect")
   .data(data)
@@ -16,11 +18,13 @@ d3
 const barWidth = 50;
 const barMargin = 2;
 
+const yScale = d3
+  .scaleLinear()
+  .domain([0, dataMax])
+  .range([0, height]);
+
 // Legger til søyler
-d3
-  .select(svg)
-  .selectAll("rect")
-  .data(data)
+graph
   .style("fill", (d, i) => (i % 2 ? "#3d3d3d" : "#fe9922"))
   .attr("x", (d, i) => 10 + i * (barWidth + barMargin))
   .attr("y", d => height - yScale(d))
