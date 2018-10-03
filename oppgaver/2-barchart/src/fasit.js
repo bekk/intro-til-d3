@@ -30,8 +30,6 @@ graph
   .attr("y", d => height - yScale(d))
   .attr("height", d => yScale(d))
   .attr("width", barWidth)
-  .attr("rx", 10)
-  .attr("ry", 10);
 
 const yScaleInverted = yScale.copy().range([height, 0]);
 const yAxis = d3.axisLeft(yScaleInverted);
