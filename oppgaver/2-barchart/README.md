@@ -63,3 +63,5 @@ d3
 <img src="../../img/2-barchart2.png" width="300" />
 
 :bulb: Man kan snu en scale ved å gi `.range()` andre verdier.
+
+:school_satchel: [Fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/2-barchart/src/fasit.js)
