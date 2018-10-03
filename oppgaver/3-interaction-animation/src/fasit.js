@@ -13,7 +13,7 @@ function handleMouseOver(d, i) {
     .style("fill", colorHover);
 
   d3
-    .select(svg)
+    .select("#svg")
     .append("text")
     .text(d.name)
     .attr("x", xCoord(d, i) + 30)
@@ -35,7 +35,7 @@ function handleMouseOut(d, i) {
 }
 
 const circles = d3
-  .select(svg)
+  .select("#svg")
   .selectAll("circle")
   .data(data, d => d.name);
 
