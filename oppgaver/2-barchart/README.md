@@ -8,7 +8,7 @@ const data = [5, 10, 1, 3, 2, 1, 4, 2, 7];
 
 og få dette resultatet:
 
-![Resultat bar chart](../../img/2-barchart.png)
+<img src="../../img/2-barchart2.png" width="300" />
 
 ## Utdelt oppsett og fasit
 
