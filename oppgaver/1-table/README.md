@@ -101,30 +101,6 @@ Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til
 </script>
 ```
 
-## :trophy: Din oppgave
-
-Oppgaven går ut på å ta disse dataene:
-
-```javascript
-const data = [
-  { name: "diamond", hardness: 10, color: "white" },
-  { name: "ruby", hardness: 9, color: "red" },
-  { name: "sapphire", hardness: 9, color: "blue" },
-  { name: "topaz", hardness: 8, color: "yellow" },
-  { name: "emerald", hardness: 7.5, color: "green" },
-  { name: "amethyst", hardness: 7, color: "purple" },
-  { name: "opal", hardness: 6, color: "black" }
-];
-```
-
-og få dette resultatet:
-
-<img src="../../img/1-table.png" width="200" />
-
-Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
-
-:school_satchel: Se [fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/1-table/src/fasit.js) for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.
-
 ## :bulb: Tips
 
 * D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig [HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
@@ -176,3 +152,27 @@ dataTR.append("foo");
 </tr>
 */
 ```
+
+## :trophy: Din oppgave
+
+Oppgaven går ut på å ta disse dataene:
+
+```javascript
+const data = [
+  { name: "diamond", hardness: 10, color: "white" },
+  { name: "ruby", hardness: 9, color: "red" },
+  { name: "sapphire", hardness: 9, color: "blue" },
+  { name: "topaz", hardness: 8, color: "yellow" },
+  { name: "emerald", hardness: 7.5, color: "green" },
+  { name: "amethyst", hardness: 7, color: "purple" },
+  { name: "opal", hardness: 6, color: "black" }
+];
+```
+
+og få dette resultatet:
+
+<img src="../../img/1-table.png" width="200" />
+
+Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
+
+:school_satchel: Se [fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/1-table/src/fasit.js) for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.
