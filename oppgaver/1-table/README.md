@@ -1,16 +1,16 @@
 # Oppgave 1 - Helt grunnleggende databinding
 
-## Data binding
+## Databinding
 
-Vanligvis når man ønsker å lagre en verdi i et programmeringspråk blir det gjort ved å tilordne en verdi til en variabel.
+Vanligvis når man ønsker å lagre en verdi i et programmeringsspråk blir det gjort ved å tilordne en verdi til en variabel.
 
 Hvis man ønsker å lagre verdiene 1, 2, 3 og 4 i et array initialiserer man variabelen og tilordner verdien på følgende måte:
 
 ```javascript
-var myArray = [1, 2, 3, 4];
+const myArray = [1, 2, 3, 4];
 ```
 
-I d3 lagrer man ikke data i variabeler. Istedenfor lagrer d3 data i DOM selectorer ved å kalle på `selection.data()`-metoden.
+I d3 lagrer man ikke data i variabler. Istedenfor lagrer d3 data i DOM-selectorer ved å kalle på `selection.data()`-metoden.
 
 `.data()`-metoden må bli kalt på en selection og tar et array av verdier som argument.
 
@@ -20,11 +20,11 @@ selection.data([array]);
 
 Når `.data()` blir kalt slår den sammen arrayet av verdier med arrayet av elementer (selection) som den blir kalt på. Første verdien i arrayet vil bli slått sammen med første element i selection.
 
-> _Et selection vil alltid være et array av elementer. Dette er sant for både `select()` og `selectAll()`_
+> _En selection vil alltid være et array av elementer. Dette gjelder for både `select()` og `selectAll()`_
 
-`.data()` returnerer verdiene fra arrayet som blir gitt som argument. Dette kan man bruke til endre attributer og styling på elementer ved å kjede metoder.
+`.data()` returnerer et d3-objekt som representerer verdiene fra arrayet som blir gitt som argument. Dette kan man bruke til å endre attributter og styling på elementer ved å kjede metoder.
 
-La oss si at vi har fem sirkeler.
+La oss si at vi har fem sirkler:
 
 ```html
 <div id="data_example1">
@@ -38,14 +38,12 @@ La oss si at vi har fem sirkeler.
 </div>
 ```
 
-Og at vi ønsker at sirkelene skal ha radiusen definert i `radiusData`.
+Og at vi ønsker at sirklene skal ha de forskjellige radiusene vi har definert i `radiusData`:
 
 ```javascript
 const radiusData = [10, 15, 20, 25, 30];
 ```
-
-`.data()` vil slå sammen verdiene i `radiusData` med sirklene.
-`.attr()` vil ta de sammenslåtte verdiene og bruke de til å endre på radiusen.
+I kodesnutten under vil kallet på `.data()` slå sammen verdiene i `radiusData` med sirklene, og gi oss et d3-objekt som inneholder sammenslåingen tilbake. Deretter bruker vi `.attr()` til å endre på radiusen til hver sirkel i objektet.
 
 ```html
 <div id="data_example1">
@@ -58,8 +56,8 @@ const radiusData = [10, 15, 20, 25, 30];
   </svg>
 </div>
 <script type="text/javascript">
-  var radiusData = [10, 15, 20, 25, 30];
-  var selectExample = d3.select("#data_example1");
+  const radiusData = [10, 15, 20, 25, 30];
+  const selectExample = d3.select("#data_example1");
 
   selectExample.selectAll("circle")
     .data(radiusData)
@@ -67,43 +65,44 @@ const radiusData = [10, 15, 20, 25, 30];
 </script>
 ```
 
-## enter og append
+## Funksjonene enter() og append()
 
-I eksempelet over hardkodet vi `circle`-elementene i html. Selvom dette er nyttig til å forklare d3, er det ikke alltid mulig å gjøre endringer i html-koden. Hvis man ønsker å endre sirkelene til andre svg elementer må man gjøre det linje for linje.
+I eksempelet over hardkodet vi `circle`-elementene i html. Selv om dette er nyttig til å forklare d3, er det ikke alltid mulig å gjøre endringer i html-koden. Hvis man for eksempel ønsker å endre sirkelene til andre `svg`-elementer må man gjøre det linje for linje.
 
-Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til DOM. I dette eksempelet vil vi bruke `.enter()` og `.append()` til å legge til `circle`-elementer til DOM.
-
-> _`.append()` kan brukes til å legge til elementer til DOM. Man kan legge til `<p>`, `<div>`, text, `<svg>`-elementer osv._
+Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til DOMen. I dette eksempelet vil vi bruke `.enter()` og `.append()` til å legge til `circle`-elementer.
 
 > _`.enter()` kan kun bli brukt etter et `.data()`-kall og brukes til å indikere at nye elementer vil bli lagt til i nåværende selection. Et `.append()` eller `.insert()`-kall følger alltid et `.enter()`-kall_
 
+> _`.append()` brukes til å legge til elementer til DOMen. Man kan legge til `<p>`, `<div>`, text, `<svg>`-elementer osv._
+
 ```html
 <div id="data_example"></div>
-<script type="text/javascript">
-  var circleData = [10, 15, 20, 25, 30];
-
-  // Legger til et svg-element
-  var selectDiv = d3.select("#data_example")
-   .append("svg:svg")
-   .attr("width", circleData.length * 100)
-   .attr("height", 100);
-
-  // Legger til en sirkel for hvert element i circleData
-  selectDiv.selectAll("circle")
-   .data(circleData) // Binder data
-   .enter()
- .append("circle")                          // Legger til sirkel
-   .attr("cx", function(d){return d[0]*14}) // x-posisjon
-   .attr("cy", 50)                          // y-posisjon
-   .attr("r", function(d){return d[0]})     // radius fra circleData
-   .style("fill", "black");
-
-</script>
 ```
+
+```js
+const circleData = [10, 15, 20, 25, 30];
+
+// Legger til et svg-element
+const selectDiv = d3.select("#data_example")
+  .append("svg:svg")
+  .attr("width", circleData.length * 100)
+  .attr("height", 100);
+
+// Legger til en sirkel for hvert element i circleData
+selectDiv.selectAll("circle")
+  .data(circleData)                        // Binder data
+  .enter()
+  .append("circle")                        // Legger til sirkel
+  .attr("cx", function(d){return d[0]*14}) // x-posisjon
+  .attr("cy", 50)                          // y-posisjon
+  .attr("r", function(d){return d[0]})     // radius fra circleData
+  .style("fill", "black");
+```
+
 
 ## :bulb: Tips
 
-* D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig [HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
+* D3 trenger ikke nødvendigvis å brukes til å binde `svg`-elementer. I denne oppgaven skal de bindes til en vanlig [HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
 
 * For å lage en `<tr>` i tabellen for hvert innslag i dataene gjør man altså:
 
