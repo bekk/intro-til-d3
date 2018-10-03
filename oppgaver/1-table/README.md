@@ -1,25 +1,5 @@
 # Oppgave 1 - Helt grunnleggende databinding
 
-Første oppgave går ut på å ta disse dataene:
-
-```javascript
-const data = [
-  { name: "diamond", hardness: 10, color: "white" },
-  { name: "ruby", hardness: 9, color: "red" },
-  { name: "sapphire", hardness: 9, color: "blue" },
-  { name: "topaz", hardness: 8, color: "yellow" },
-  { name: "emerald", hardness: 7.5, color: "green" },
-  { name: "amethyst", hardness: 7, color: "purple" },
-  { name: "opal", hardness: 6, color: "black" }
-];
-```
-
-og få dette resultatet:
-
-![Resultat oppgave 1](../../img/1-table.png)
-
-Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
-
 ## Data binding
 
 Vanligvis når man ønsker å lagre en verdi i et programmeringspråk blir det gjort ved å tilordne en verdi til en variabel.
@@ -120,6 +100,29 @@ Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til
 
 </script>
 ```
+
+## Din oppgave
+
+Oppgaven går ut på å ta disse dataene:
+
+```javascript
+const data = [
+  { name: "diamond", hardness: 10, color: "white" },
+  { name: "ruby", hardness: 9, color: "red" },
+  { name: "sapphire", hardness: 9, color: "blue" },
+  { name: "topaz", hardness: 8, color: "yellow" },
+  { name: "emerald", hardness: 7.5, color: "green" },
+  { name: "amethyst", hardness: 7, color: "purple" },
+  { name: "opal", hardness: 6, color: "black" }
+];
+```
+
+og få dette resultatet:
+
+![Resultat oppgave 1](../../img/1-table.png)
+
+Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
+
 
 ## Tips
 
