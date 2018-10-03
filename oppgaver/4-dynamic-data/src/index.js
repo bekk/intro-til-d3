@@ -10,7 +10,6 @@ const data = [
   { name: "j", value: 7 }
 ];
 
-const svg = document.getElementById("svg");
 const dataMax = d3.max(data);
 const width = 800;
 const height = 500;
