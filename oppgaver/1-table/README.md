@@ -144,7 +144,7 @@ const dataTR = d3
 
 * D3 kommer med mange nyttige verktøy for datavisualiseringsrelaterte oppgaver. F.eks. `format(<format>)`: https://github.com/d3/d3-format#d3-format
 
-* Måten man bruker `.append påvirker hierarkiet av elementer:
+* Måten man bruker `.append` påvirker hierarkiet av elementer:
 
 ```javascript
 dataTR
