@@ -101,7 +101,7 @@ Vi kan forbedre koden ved å bruke d3 til å generere og legge til elementer til
 </script>
 ```
 
-## Din oppgave
+## :trophy: Din oppgave
 
 Oppgaven går ut på å ta disse dataene:
 
@@ -123,8 +123,9 @@ og få dette resultatet:
 
 Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
 
+:school_satchel: Se [fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/1-table/src/fasit.js) for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.
 
-## Tips
+## :bulb: Tips
 
 * D3 trenger ikke å nødvendigvis å binde til svg-elementer. I denne oppgaven skal de bindes til en vanlig [HTML-tabell](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) `<table>`
 
@@ -175,7 +176,3 @@ dataTR.append("foo");
 </tr>
 */
 ```
-
-## Fasit
-
-Se `fasit.js` for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.
