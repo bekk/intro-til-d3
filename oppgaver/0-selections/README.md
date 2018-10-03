@@ -36,7 +36,7 @@ d3.select("#id");
 d3.select("[color=black]");
 ```
 
-Man kan også dra nytte av AND og OR operartorer. For å velge et element som oppfyller minst et av to kriterer kan man sette de side om side, mens hvis man ønsker å velge et element hvor begge kriterene stemmer kan man sette et komma mellom de som nedenfor:
+Man kan også dra nytte av AND og OR operartorer. For å velge et element som oppfyller minst et av to kriterer kan man sette et komma mellom de, men hvis man ønsker å velge et element hvor begge kriterene stemmer kan man sette de side om side som nedenfor:
 
 * AND
 
