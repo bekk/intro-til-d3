@@ -1,15 +1,14 @@
 const data = [5, 10, 1, 3, 2, 1, 4, 2, 7];
 
-const svg = document.getElementById("svg");
 const dataMax = d3.max(data);
 const width = 500;
 const height = 500;
 
-d3.select(svg).style("background-color", "#d1d1d1");
+d3.select("#svg").style("background-color", "#d1d1d1");
 
 // Legger til et rect for hvert element i data
 const graph = d3
-  .select(svg)
+  .select("#svg")
   .selectAll("rect")
   .data(data)
   .enter()
@@ -35,7 +34,7 @@ const yScaleInverted = yScale.copy().range([height, 0]);
 const yAxis = d3.axisLeft(yScaleInverted);
 
 d3
-  .select(svg)
+  .select("#svg")
   .append("g")
   .attr("transform", `translate(${-barMargin}, 0)`)
   .call(yAxis);
