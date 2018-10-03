@@ -69,15 +69,15 @@ Nå skal vi bli kjent med `d3.select`, og vi skal bruke det til å endre styling
   <h1>Header</h1>
   <p>Paragraph</p>
   <p id="paragraph">Paragraph med unik id</p>
-  <p class="paragraph" id="paragraph">Paragraph med unik id og klasse</p>
+  <p class="paragraph" id="paragraph2">Paragraph med unik id og klasse</p>
   <p class="paragraph">Paragraph med klasse</p>
 </body>
 ```
 
-`.style()` tar to argumenter og må bli kalt på en selection. Første argument er css-verdien som skal endres og andre argument er den faktiske verdien.
+`.style()` tar to argumenter og må bli kalt på en selection. Første argument er css-verdien som skal endres og andre argument er den faktiske verdien:
 
 ```javascript
-selection.style("CSS Style string", "value");
+selection.style("CSS property", "value");
 ```
 
 :trophy: 1. Endre headeren sin tekstfargen til rød.
@@ -88,7 +88,7 @@ selection.style("CSS Style string", "value");
 
 :trophy: 4. Gi paragrafen `<p id="paragraph">Paragraph med id</p>` tekstfargen grønn.
 
-:trophy: 5. Gi paragrafen `<p class="paragraph" id="paragraph">Paragraph med unik id og klasse</p>` tekstfargen oransje og skriftstørrelse 40px.
+:trophy: 5. Gi paragrafen `<p class="paragraph" id="paragraph2">Paragraph med unik id og klasse</p>` tekstfargen oransje og skriftstørrelse 40px.
 
 :school_satchel: [Fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/0-selections/src/fasit.js)
 
