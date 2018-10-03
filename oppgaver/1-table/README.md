@@ -119,7 +119,7 @@ const data = [
 
 og få dette resultatet:
 
-![Resultat oppgave 1](../../img/1-table.png)
+<img src="../../img/1-table.png" width="200" />
 
 Legg merke til nummerformateringen og fargene. Oppgaven er ferdig når du synes at ditt resultat er likt nok.
 
