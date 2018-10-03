@@ -19,13 +19,13 @@ headerTR.append("th").text("Hardness");
 
 headerTR.append("th").text("Color");
 
-const dataTR = d3
+const dataTbody = d3
   .select(table)
   .append("tbody")
   .selectAll("tr")
-  .data(data)
-  .enter()
-  .append("tr");
+  .data(data);
+
+const dataTR = dataTbody.enter().append("tr");
 
 dataTR.append("td").text((d, i) => d.name);
 
