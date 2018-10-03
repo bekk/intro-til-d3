@@ -7,6 +7,6 @@ d3.selectAll(".paragraph").style("color", "blue");
 d3.select("#paragraph").style("color", "green");
 
 d3
-  .select("#paragraph.paragraph")
+  .select("#paragraph2.paragraph")
   .style("font-size", "40px")
   .style("color", "orange");
