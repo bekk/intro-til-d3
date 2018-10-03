@@ -8,49 +8,53 @@ Boilerplate-koden som trengs for å få bygd en d3-visualisering i nettleseren e
 
 ## d3.select
 
-Å velge elementer er viktig for å programmere med d3, da man ikke kan gjøre så mye uten de. Før man endrer eller modifiserer elementer i d3 må man velge de (derav `select`). Dette kan bli gjort ved å bruke enten `d3.select(this)` eller `d3.selectAll(this)`, hvor `this` er det/de spesifikke elementene du ønsker å velge. `.select()` vil kun velge første forekomst som passer til kriteriet man spesifiserer. `.selectAll()` vil velge alle elementer som passer til kriteriet man spesifiserer og returnere det som et array av elementer.
+Å velge elementer er viktig for å programmere med d3, da man ikke kan gjøre så mye uten dem. Før man endrer eller modifiserer elementer i d3 må man velge dem (derav `select`). Dette kan bli gjort ved å bruke enten `d3.select(this)` eller `d3.selectAll(this)`, hvor `this` er det/de spesifikke elementene du ønsker å velge. `.select()` vil kun velge første forekomst som passer til kriteriet man spesifiserer. `.selectAll()` vil velge alle elementer som passer til kriteriet man spesifiserer og returnere det som et array av elementer.
 
 Man kan velge elementer på følgende måter:
 
-* Tag
+### Tag
 
 ```javascript
 d3.select("div");
 ```
 
-* Class
+### Class
 
 ```javascript
 d3.select(".classname");
 ```
 
-* Unique identifier
+### Unique identifier
 
 ```javascript
 d3.select("#id");
 ```
 
-* Attribute
+### Attribute
 
 ```javascript
 d3.select("[color=black]");
 ```
 
-Man kan også dra nytte av AND og OR operartorer. For å velge et element som oppfyller minst et av to kriterer kan man sette et komma mellom de, men hvis man ønsker å velge et element hvor begge kriterene stemmer kan man sette de side om side som nedenfor:
+### Kombinasjon av elementer
 
-* AND
+Man kan også dra nytte av AND og OR operatorer. For å velge et element som oppfyller minst ett av to kriterier kan man sette et komma mellom dem, men hvis man ønsker å velge et element hvor begge kriteriene stemmer kan man sette dem side om side som nedenfor:
+
+- AND
 
 ```javascript
 d3.select(".this.that");
 ```
 
-* OR
+- OR
 
 ```javascript
 d3.select(".this,.that");
 ```
 
-Hvis man ønsker kan man kombinere flere `select()`. For eksempel, så kan man velge første "bold" element i hver paragraf med følgende kode:
+### Nøsting
+
+Hvis man ønsker kan man kombinere flere `select()`. For eksempel, så kan man velge første "bold" element, dvs et `<b></b>`-element, som ligger inni en paragraf, det vil si et `<p></p>`-element, med følgende kode:
 
 ```javascript
 d3.selectAll(“p”).select(“b”)
