@@ -84,7 +84,7 @@ const circleData = [10, 15, 20, 25, 30];
 
 // Legger til et svg-element
 const selectDiv = d3.select("#data_example")
-  .append("svg:svg")
+  .append("svg")
   .attr("width", circleData.length * 100)
   .attr("height", 100);
 
