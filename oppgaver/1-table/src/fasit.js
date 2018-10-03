@@ -8,10 +8,8 @@ const data = [
   { name: "opal", hardness: 6, color: "black" }
 ];
 
-const table = document.getElementById("table");
-
 // Entrypoint for d3
-const headerTR = d3.select(table).append("thead");
+const headerTR = d3.select("#table").append("thead");
 
 headerTR.append("th").text("Name");
 
@@ -20,7 +18,7 @@ headerTR.append("th").text("Hardness");
 headerTR.append("th").text("Color");
 
 const dataTbody = d3
-  .select(table)
+  .select("#table")
   .append("tbody")
   .selectAll("tr")
   .data(data);
