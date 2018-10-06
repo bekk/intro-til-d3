@@ -1,3 +1,22 @@
+const data = [
+  { name: "a" },
+  { name: "b" },
+  { name: "c" },
+  { name: "e" },
+  { name: "f" },
+  { name: "g" },
+  { name: "h" },
+  { name: "i" },
+  { name: "j" },
+  { name: "k" },
+  { name: "l" },
+  { name: "m" }
+];
+
+const dataMax = d3.max(data);
+const width = 500;
+const height = 500;
+
 const color = (d, i) => `hsl(32, 100%, 60%)`;
 const colorHover = (d, i) => `hsl(32, 100%, 80%)`;
 const widthCount = 4;
@@ -10,7 +29,7 @@ function handleMouseOver(d, i) {
     .transition()
     .duration(100)
     .attr("r", 30)
-    .style("fill", colorHover);
+    .attr("fill", colorHover);
 
   d3
     .select("#svg")
@@ -29,7 +48,7 @@ function handleMouseOut(d, i) {
     .transition()
     .duration(500)
     .attr("r", 25)
-    .style("fill", color);
+    .attr("fill", color);
 
   d3.select(`#text_${d.name}`).remove();
 }
