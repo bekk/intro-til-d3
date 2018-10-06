@@ -57,7 +57,9 @@ og lage en animert visualisering man kan interagere med:
 
 Når musen kommer over en sirkel utvider den seg sakte og viser navnet sitt. Når musen går ut forsvinner navnet og sirkelen går sakte tilbake til sin gamle størrelse.
 
-:trophy: Oppgave 1: Vi starter med å lage `handleMouseOver` funksjonen. Når man holder over en sirkel skal den utvide seg sakte, endre farge og vise navnet sitt med en `transition`.
+:trophy: Oppgave 1: 
+
+Vi starter med å lage `handleMouseOver` funksjonen. Når man holder over en sirkel skal den utvide seg sakte, endre farge og vise navnet sitt med en `transition`.
 
 :bulb: Man kan utvide sirkelen ved å øke attributten `r` (radius) og endre fargen ved å endre `fill` attributten.
 
@@ -68,7 +70,9 @@ Når musen kommer over en sirkel utvider den seg sakte og viser navnet sitt. Nå
 
 Nå burde vi ha sirkeler som utvider seg og viser navnet sitt når man holder musepekeren over de. Det eneste problemet er at de ikke endrer tilstand tilbake til sin opprinnelige tilstand når musepekeren ikke er over elementet lenger.
 
-:trophy: Oppgave 2: Implementer `handleMouseOut` funksjonen. Denne skal tranformere sirkelen tilbake til opprinnelig tilstand og fjerne teksten. 
+:trophy: Oppgave 2: 
+
+Implementer `handleMouseOut` funksjonen. Denne skal tranformere sirkelen tilbake til opprinnelig tilstand og fjerne teksten. 
 
 :bulb: Man kan fjerne et element med `.remove()`.
 
