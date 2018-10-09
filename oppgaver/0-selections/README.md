@@ -94,4 +94,4 @@ selection.style("CSS property", "value");
 
 Etter å ha fullført de 5 oppgavene vil du ende opp med følgende i nettleseren.
 
-![Resultat selections](../../img/selections.png)
+![Resultat selections](../../img/0-selections.png)
