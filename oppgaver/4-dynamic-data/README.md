@@ -26,7 +26,7 @@ og håndtere at dataene endrer seg kontinuerlig. Det vil bli lagt til nye data, 
 
 ![Resultat dynamic data](../../img/4-dynamic-data.gif)
 
-Hver sirkel har en fargenyanse og størrelse iht til sin verdi, og navnet sitt over seg. Ved endret verdi animeres endring i sirkelens størrelse. Ved fjerning og tillegging av data animeres translasjonen til nye posisjoner.
+Hver sirkel har en fargenyanse og størrelse iht til sin verdi, og den har navnet sitt over seg. Ved endret verdi animeres endring i sirkelens størrelse. Ved fjerning og tillegging av data animeres translasjonen til nye posisjoner.
 
 :bulb: Oppsettet i den utdelte koden kaller `updateChart()` både under oppstart, og på nytt hver gang data endrer seg. Slik vil D3 kunne oppdatere og animere visualiseringen.
 
