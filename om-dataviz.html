@@ -47,6 +47,13 @@
         float: right;
         padding-top: 1em;
       }
+      .small {
+        font-size: 80%;
+      }
+
+      .small .remark-code {
+        font-size: 80% !important;
+      }
     </style>
   </head>
   <body>
@@ -58,56 +65,90 @@ class: center, middle, inverse
 ---
 # Datavisualisering
 ---
-## Hva er Datavisualisering?
----
 layout: false
 
 .left-column[
-  ## Hva?
+  ### Hva?
 ]
 .right-column[
-  Kort fortalt: Visuell kommunikasjon
+  ## Visuell kommunikasjon
 
-  Dette kan innebære mange ting, men stort sett er det snakk om bruk av grafikk
-  for å presentere data.
-
-  - Grafer
-
-  - Figurer
-
-  - Infographics
+  Visualisering er kommunikasjon gjennom visuelle virkemidler.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
+  ### Hva?
 ]
 .right-column[
-  Men også ting som
-  - Animasjoner
+  ## Visuell kommunikasjon
 
-  - Spill og simuleringer
-
-  - Syntax-highlighting
-
-  - Det meste som bruker visuelle virkemidler for å formidle en hendelse eller noe informasjon
+  Visualisering er kommunikasjon gjennom visuelle virkemidler.
 ]
----
-
-layout: true
-class: center, middle, inverse
-
----
-## Hvorfor er Datavisualisering viktig?
+.right-column[
+- Animasjoner & Transisjoner
+- Fargekoding
+- Fotografi og video
+- Kropsspråk
+- Piktografi & Bokstaver
+]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
 ]
 .right-column[
+  ## Datavisualisering
+
+  En undergren av visuell kommunikasjon hvor målet er å formidle betydning av data gjennom et visuelt medium.
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+]
+.right-column[
+  ## Datavisualisering
+
+  En undergren av visuell kommunikasjon hvor målet er å formidle betydning av data gjennom et visuelt medium.
+]
+.right-column[
+- Grafer
+- Figurer
+- Infographics
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+]
+.right-column[
+  ## Datavisualisering
+
+  En undergren av visuell kommunikasjon hvor målet er å formidle betydning av data gjennom et visuelt medium.
+]
+.right-column[
+- Grafer
+- Figurer
+- Infographics
+]
+.right-column[
+  Gjerne ved å bruke visuell kommunikasjon, som feks fargekoding og animasjoner.
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+]
+.right-column[
+  ## Er datavisualisering viktig?
+
   Mennesker er flinke til å tolke visuell informasjon.
 
   Vi ser kjapt forskjell i
@@ -120,1123 +161,900 @@ layout: false
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
-  <table
-  class="wikitable"
-  style="text-align: center; margin-left:auto; margin-right:auto;"
-  border="1"
+  ## Er datavisualisering viktig?
+
+  Mennesker er flinke til å tolke visuell informasjon.
+
+  Vi ser kjapt forskjell i
+  - ...farge
+  - ...størrelse
+  - ...form
+  - ...orientering
+]
+.right-column[
+  Men vi er ganske dårlige til å se sammenhenger i rå data.
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+]
+.right-column[
+<table
+class="wikitable"
+style="text-align: center; margin-left:auto; margin-right:auto;"
+border="1"
 >
-  <caption>Anscombe's quartet</caption>
-  <tbody>
-    <tr>
-      <th colspan="2">I</th>
-      <th colspan="2">II</th>
-      <th colspan="2">III</th>
-      <th colspan="2">IV</th>
-    </tr>
-    <tr>
-      <td>x</td>
-      <td>y</td>
-      <td>x</td>
-      <td>y</td>
-      <td>x</td>
-      <td>y</td>
-      <td>x</td>
-      <td>y</td>
-    </tr>
-    <tr>
-      <td>10.0</td>
-      <td>8.04</td>
-      <td>10.0</td>
-      <td>9.14</td>
-      <td>10.0</td>
-      <td>7.46</td>
-      <td>8.0</td>
-      <td>6.58</td>
-    </tr>
-    <tr>
-      <td>8.0</td>
-      <td>6.95</td>
-      <td>8.0</td>
-      <td>8.14</td>
-      <td>8.0</td>
-      <td>6.77</td>
-      <td>8.0</td>
-      <td>5.76</td>
-    </tr>
-    <tr>
-      <td>13.0</td>
-      <td>7.58</td>
-      <td>13.0</td>
-      <td>8.74</td>
-      <td>13.0</td>
-      <td>12.74</td>
-      <td>8.0</td>
-      <td>7.71</td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td>8.81</td>
-      <td>9.0</td>
-      <td>8.77</td>
-      <td>9.0</td>
-      <td>7.11</td>
-      <td>8.0</td>
-      <td>8.84</td>
-    </tr>
-    <tr>
-      <td>11.0</td>
-      <td>8.33</td>
-      <td>11.0</td>
-      <td>9.26</td>
-      <td>11.0</td>
-      <td>7.81</td>
-      <td>8.0</td>
-      <td>8.47</td>
-    </tr>
-    <tr>
-      <td>14.0</td>
-      <td>9.96</td>
-      <td>14.0</td>
-      <td>8.10</td>
-      <td>14.0</td>
-      <td>8.84</td>
-      <td>8.0</td>
-      <td>7.04</td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>7.24</td>
-      <td>6.0</td>
-      <td>6.13</td>
-      <td>6.0</td>
-      <td>6.08</td>
-      <td>8.0</td>
-      <td>5.25</td>
-    </tr>
-    <tr>
-      <td>4.0</td>
-      <td>4.26</td>
-      <td>4.0</td>
-      <td>3.10</td>
-      <td>4.0</td>
-      <td>5.39</td>
-      <td>19.0</td>
-      <td>12.50</td>
-    </tr>
-    <tr>
-      <td>12.0</td>
-      <td>10.84</td>
-      <td>12.0</td>
-      <td>9.13</td>
-      <td>12.0</td>
-      <td>8.15</td>
-      <td>8.0</td>
-      <td>5.56</td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>4.82</td>
-      <td>7.0</td>
-      <td>7.26</td>
-      <td>7.0</td>
-      <td>6.42</td>
-      <td>8.0</td>
-      <td>7.91</td>
-    </tr>
-    <tr>
-      <td>5.0</td>
-      <td>5.68</td>
-      <td>5.0</td>
-      <td>4.74</td>
-      <td>5.0</td>
-      <td>5.73</td>
-      <td>8.0</td>
-      <td>6.89</td>
-    </tr>
-  </tbody>
+<caption>Anscombe's quartet</caption>
+<tbody>
+  <tr>
+    <th colspan="2">I</th>
+    <th colspan="2">II</th>
+    <th colspan="2">III</th>
+    <th colspan="2">IV</th>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>y</td>
+    <td>x</td>
+    <td>y</td>
+    <td>x</td>
+    <td>y</td>
+    <td>x</td>
+    <td>y</td>
+  </tr>
+  <tr>
+    <td>10.0</td>
+    <td>8.04</td>
+    <td>10.0</td>
+    <td>9.14</td>
+    <td>10.0</td>
+    <td>7.46</td>
+    <td>8.0</td>
+    <td>6.58</td>
+  </tr>
+  <tr>
+    <td>8.0</td>
+    <td>6.95</td>
+    <td>8.0</td>
+    <td>8.14</td>
+    <td>8.0</td>
+    <td>6.77</td>
+    <td>8.0</td>
+    <td>5.76</td>
+  </tr>
+  <tr>
+    <td>13.0</td>
+    <td>7.58</td>
+    <td>13.0</td>
+    <td>8.74</td>
+    <td>13.0</td>
+    <td>12.74</td>
+    <td>8.0</td>
+    <td>7.71</td>
+  </tr>
+  <tr>
+    <td>9.0</td>
+    <td>8.81</td>
+    <td>9.0</td>
+    <td>8.77</td>
+    <td>9.0</td>
+    <td>7.11</td>
+    <td>8.0</td>
+    <td>8.84</td>
+  </tr>
+  <tr>
+    <td>11.0</td>
+    <td>8.33</td>
+    <td>11.0</td>
+    <td>9.26</td>
+    <td>11.0</td>
+    <td>7.81</td>
+    <td>8.0</td>
+    <td>8.47</td>
+  </tr>
+  <tr>
+    <td>14.0</td>
+    <td>9.96</td>
+    <td>14.0</td>
+    <td>8.10</td>
+    <td>14.0</td>
+    <td>8.84</td>
+    <td>8.0</td>
+    <td>7.04</td>
+  </tr>
+  <tr>
+    <td>6.0</td>
+    <td>7.24</td>
+    <td>6.0</td>
+    <td>6.13</td>
+    <td>6.0</td>
+    <td>6.08</td>
+    <td>8.0</td>
+    <td>5.25</td>
+  </tr>
+  <tr>
+    <td>4.0</td>
+    <td>4.26</td>
+    <td>4.0</td>
+    <td>3.10</td>
+    <td>4.0</td>
+    <td>5.39</td>
+    <td>19.0</td>
+    <td>12.50</td>
+  </tr>
+  <tr>
+    <td>12.0</td>
+    <td>10.84</td>
+    <td>12.0</td>
+    <td>9.13</td>
+    <td>12.0</td>
+    <td>8.15</td>
+    <td>8.0</td>
+    <td>5.56</td>
+  </tr>
+  <tr>
+    <td>7.0</td>
+    <td>4.82</td>
+    <td>7.0</td>
+    <td>7.26</td>
+    <td>7.0</td>
+    <td>6.42</td>
+    <td>8.0</td>
+    <td>7.91</td>
+  </tr>
+  <tr>
+    <td>5.0</td>
+    <td>5.68</td>
+    <td>5.0</td>
+    <td>4.74</td>
+    <td>5.0</td>
+    <td>5.73</td>
+    <td>8.0</td>
+    <td>6.89</td>
+  </tr>
+</tbody>
 </table>
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
-  Disse fire datasettene har identiske nøkkelverdier:
-  - Avg X: 9
+  ## Statistikk
 
-  - Spredning X: 11
-
-  - Avg Y: 7.5
-
-  - Spredning Y: 4.125
-
-  - Korelasjon: 0.816
-
-  - Lineær regresjon: `y = 3 + 0.5x`
-
+  Det er fort fristende å bruke statistikk til å tolke data. Kanskje spesielt hvis du er komfortabel med programmering.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
-  Når vi reduserer informasjon i et forsøk på å forstå en sammenheng kan vi fort havne i trøbbel.
+  ## Statistikk
 
+  Det er fort fristende å bruke statistikk til å tolke data. Kanskje spesielt hvis du er komfortabel med programmering.
+]
+.right-column[
+  De 4 datasettene har identiske statistiske nøkkelverdier
+- Avg X: 9
+- Spredning X: 11
+- Avg Y: 7.5
+- Spredning Y: 4.125
+- Korelasjon: 0.816
+- Lineær regresjon: `y = 3 + 0.5x`
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+]
+.right-column[
+  ## Visualisering
+
+  Hvis vi visualiserer datasettene ved å plotte dem i grafer, får vi et ganske annet bilde av ting.
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+]
+.right-column[
+  ## Visualisering
+
+  Hvis vi visualiserer datasettene ved å plotte dem i grafer, får vi et ganske annet bilde av ting.
+]
+.right-column[
   ![Anscombe's Quartet](https://upload.wikimedia.org/wikipedia/commons/e/ec/Anscombe%27s_quartet_3.svg)
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
-  Visualisering av data hjelper oss enormt mye med å utføre analytiske oppgaver:
+  ## Visualisering
 
-  - sammenligning
-
-  - fastslå kausalitet
-
-  - finne sammenhenger/likheter
-
-  - kategorisering
-
-  - finne trender
-
-  Ulike visualiseringer hjelper oss med ulike oppgaver.
-
+  Når vi reduserer informasjon i et forsøk på å forstå sammenhenger kommer vi fort i trøbbel.
+]
+.right-column[
+  Datavisualisering hjelper oss til å formidle mer informasjon på en enklere måte så behovet for å redusere informasjonen ikke er like stort.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
+  ## Visualisering
 
-  ![line chart](https://upload.wikimedia.org/wikipedia/commons/0/02/ScientificGraphSpeedVsTime.svg)
-
+  Når vi reduserer informasjon i et forsøk på å forstå sammenhenger kommer vi fort i trøbbel.
+]
+.right-column[
+  Datavisualisering hjelper oss til å formidle mer informasjon på en enklere måte så behovet for å redusere informasjonen ikke er like stort.
+]
+.right-column[
+Mange analytiske oppgaver blir enklere med hjelp av visualisering:
+- sammenligning
+- fastslå kausalitet
+- finne sammenhenger/likheter
+- kategorisering
+- finne trender
+- finne avvik
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
+  ## Nyttig verktøy
 
-  ![bar chart](https://upload.wikimedia.org/wikipedia/commons/3/35/Human_losses_of_world_war_two_by_country.png)
-
+  Datavisualisering er et veldig nyttig verktøy for mange andre fagområder.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
 ]
 .right-column[
+  ## Nyttig verktøy
 
-  ![scatter plot](https://upload.wikimedia.org/wikipedia/commons/0/0f/Oldfaithful3.png)
-
+  Datavisualisering er et veldig nyttig verktøy for mange andre fagområder.
+]
+.right-column[
+  Data Science, AI/ML, Forretningsutvikling, Big Data — alle disse har godt av gode visualiseringskills.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
+  ## Kommunikasjon
 
-  ![pie chart](https://upload.wikimedia.org/wikipedia/commons/d/db/English_dialects1997.svg)
-
+  God datavisualisering handler om god kommunikasjon.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
+  ## Kommunikasjon
 
+  God datavisualisering handler om god kommunikasjon.
+]
+.right-column[
+  Riktig visualiseringsform til riktig formål.
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+]
+.right-column[
+  ## Kommunikasjon
+
+  God datavisualisering handler om god kommunikasjon.
+]
+.right-column[
+  Riktig visualiseringsform til riktig formål.
+]
+.right-column[
+  Hva ønsker du å legge til rette for?
+  - Utforsking og sammenligning
+  - Forklare eller forstå
+  - Underholdning
+  - Overtalelse
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+]
+.right-column[
+  ## Linjediagram
+  (https://beta.observablehq.com/@mbostock/d3-index-chart)
+  ![line chart](img/slides/linegraph.png)
+  Bra for: Forstå trender og utvikling over tid
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+]
+.right-column[
+  ## Stolpediagram
+  (https://beta.observablehq.com/@mbostock/d3-bar-chart)
+  ![bar chart](img/slides/barchart.png)
+  Bra for: Sammenligning av mengder/målinger
+]
+---
+layout: false
+
+.left-column[
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+]
+.right-column[
+  ## Kakediagram
   ![pie chart vs bar chart](https://upload.wikimedia.org/wikipedia/commons/b/b4/Piecharts.svg)
-
+  Bra for: Veldig få ting 😅
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
-
-  ![layered area chart](https://upload.wikimedia.org/wikipedia/commons/b/bb/US_and_USSR_nuclear_stockpiles.svg)
-
+  ## Sunburstdiagram
+  (https://beta.observablehq.com/@mbostock/d3-sunburst)
+  <img src="img/slides/sunburst.png" alt="Sunburstdiagram" style="width: 75%;"/>
+  Bra for: Utforske og forstå fordeling av mengder
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
-
-  ![area chart](https://upload.wikimedia.org/wikipedia/commons/f/fa/De_wanderung.svg)
-
+  ## Scatterplot
+  (https://beta.observablehq.com/@mbostock/d3-scatterplot)
+  ![scatterplot](img/slides/scatterplot.png)
+  Bra for: Finne avvik
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
-
-  ![radar chart](https://upload.wikimedia.org/wikipedia/commons/b/ba/Fuentes_de_consumo_de_energ%C3%ADa_diaria_2001-2003_%28FAO%29.svg)
-
-]
----
-
-layout: true
-class: middle, center, inverse
-
----
-## Hvordan gjør vi datavisualisering?
----
-layout: false
-
-.left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
-]
-.right-column[
-  Vi kan kategorisere datavisualiseringer etter hva de forsøker å oppnå:
-
-  ### Forklarende
-
-  Formidler et par nøkkelpoenger og bruker visualiseringer for å underbygge poengene.
-
-  ### Utforskende
-
-  Presenterer et (stort) datsasett uten å framheve noen spesifikke poeng. Bruker visualisering som et verktøy for å la brukere utforske sine egne hypoteser.
+  ## Boxplot
+  (https://bl.ocks.org/mbostock/4061502)
+  ![boxplot](img/slides/boxplot.png)
+  Bra for: Formidle usikkerhet
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
-  Det kan også være nyttig å kategorisere på hvilken grad av brukerinvolvering en visualisering har.
+  ## Historiefortelling
 
-  Om visualiseringen er interaktiv eller statisk.
+  Vi har sett mange enkeltvisualiseringer, men der datavisualisering virkelig skinner er når det brukes til å formidle et budskap sammen med andre virkemidler.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
 ]
 .right-column[
-  Dette gir oss et slags rammeverk for å lage visualiseringer
+  ## Historiefortelling
 
-  ### Statisk og Forklarende
-  Du presenterer en konklusjon for brukeren på en visuell måte.
-
-  ### Statisk og Utforskende
-  Du presenterer data for en bruker på en visuell måte og lar brukeren selv finne en konklusjon.
-
-  ### Interaktiv og Forklarende
-  Du lar brukeren selv oppdage en forhåndsbestemt konklusjon.
-
-  ### Interaktiv og Utforskende
-  Du gir brukeren muligheten og verktøyene til å finne sine egne konklusjoner i dataene.
-
+  Vi har sett mange enkeltvisualiseringer, men der datavisualisering virkelig skinner er når det brukes til å formidle et budskap sammen med andre virkemidler.
+]
+.right-column.small[
+- http://www.r2d3.us/visual-intro-to-machine-learning-part-1/
+- https://static.scientificamerican.com/sciam/assets/Image/saw0717Gsci31_d.png
+- https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study
+- http://www.datasketch.es/september/code/nadieh/
+- https://pudding.cool/2017/03/hamilton/index.html
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  <br />
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-  </svg>
+  ## D3 — Data Driven Documents
+
+  http://d3js.org/
+
+  Veldig mye av det dere har sett til nå har vært laga med et rammeverk som heter D3.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Valgresultat](https://www.nrk.no/valg/2017/resultat/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-  </svg>
+  ## D3 — Data Driven Documents
+
+  http://d3js.org/
+
+  Veldig mye av det dere har sett til nå har vært laga med et rammeverk som heter D3.
+]
+.right-column[
+  D3 er et JavaScript rammeverk for å lage datavisualiseringer på web. Alt fra statiske grafer til interaktive artikler.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Olympics - Nadieh Bremer](http://www.datasketch.es/august/code/nadieh/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-  </svg>
+  ## D3 — Data Driven Documents
+
+  http://d3js.org/
+
+  Veldig mye av det dere har sett til nå har vært laga med et rammeverk som heter D3.
+]
+.right-column[
+  D3 er et JavaScript rammeverk for å lage datavisualiseringer på web. Alt fra statiske grafer til interaktive artikler.
+]
+.right-column[
+  Det er veldig populært og har eksistert lenge, så det har blitt en slags de facto standard for datavisualisering med en stor community bak seg.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Splunk Dashboards](http://docs.splunk.com/images/4/4c/7.1_sales_power_dash.png)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-  </svg>
+  ## D3 — Data Driven Documents
+
+  http://d3js.org/
+
+  Veldig mye av det dere har sett til nå har vært laga med et rammeverk som heter D3.
+]
+.right-column[
+  D3 er et JavaScript rammeverk for å lage datavisualiseringer på web. Alt fra statiske grafer til interaktive artikler.
+]
+.right-column[
+  Det er veldig populært og har eksistert lenge, så det har blitt en slags de facto standard for datavisualisering med en stor community bak seg.
+]
+.right-column[
+  Og det skal dere få lære litt om i dag.
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Polygons](http://ncase.me/polygons/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-  </svg>
+  ## D3
+
+  Kjernen i D3 er å koble sammen data med HTML eller SVG (ofte omtalt som DOM).
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Circles](https://qz.com/994486/the-way-you-draw-circles-says-a-lot-about-you/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-  </svg>
+  ## D3
+
+  Kjernen i D3 er å koble sammen data med HTML eller SVG (ofte omtalt som DOM).
+]
+.right-column.small[
+~~~javascript
+[
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+~~~
+
+.center[&#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681;]
+
+~~~html
+<svg height="300" width="600">
+    <circle cx="100" cy="150" r="64" style="fill:green" />
+    <circle cx="220" cy="150" r="34" style="fill:orange" />
+    <circle cx="340" cy="150" r="51" style="fill:red" />
+</svg>
+~~~
+
+.center[&#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681; &#8681;]
+
+<img src="img/slides/svg-example.png" alt="SVG Result" style="width: 50%;">
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Rythm of Food](http://rhythm-of-food.net/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-  </svg>
+## Join
+`index.html`:
+~~~html
+<svg id="minSVG" width="600" height="300"></svg>
+~~~
+`index.js`:
+~~~javascript
+let data = [
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Visual Machine Learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-  </svg>
+## Join
+`index.html`:
+~~~html
+<svg id="minSVG" width="600" height="300"></svg>
+~~~
+`index.js`:
+~~~javascript
+let data = [
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+
+// Her binder vi hvert datum i datasettet vårt
+// til et circle-element i #minSVG
+let circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, d => d.name);
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Making it big](https://pudding.cool/2017/01/making-it-big/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-  </svg>
+## Enter
+
+`index.js`:
+~~~javascript
+let data = [
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+
+// Her binder vi hvert datum i datasettet vårt
+// til et circle-element i #minSVG
+let circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, d => d.name);
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Bussed Out](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-  </svg>
+## Enter
+
+`index.js`:
+~~~javascript
+let data = [
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+
+// Her binder vi hvert datum i datasettet vårt
+// til et circle-element i #minSVG
+let circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, d => d.name);
+
+// Be om alle nye elementer
+let newItems = circles.enter();
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Rap](http://graphics.wsj.com/hamilton/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-    <g transform="translate(60,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Rap</text>
-    </g>
-  </svg>
+## Enter
+
+`index.js`:
+~~~javascript
+let data = [
+    { name:"Ireland", pop:6378 },
+    { name:"Tanzania", pop:3407 },
+    { name:"Norway", pop:5084 }
+]
+
+// Her binder vi hvert datum i datasettet vårt
+// til et circle-element i #minSVG
+let circles = select("#minSVG")
+  .selectAll("circle")
+  .data(data, d => d.name);
+
+// Be om alle nye elementer
+let newItems = circles.enter();
+
+newItems
+  .append("circle") // legger til en <circle>
+  .style("fill", "#ff8800")
+  .attr("cx", (d, i) => 50 + i * 100)
+  .attr("cy", 150)
+  .attr("r", (d, i) => d.pop / 100);
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Baby boom](https://blogs.scientificamerican.com/sa-visual/why-are-so-many-babies-born-around-8-00-a-m/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-    <g transform="translate(60,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Rap</text>
-    </g>
-    <g transform="translate(85,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="5" font-size="2px">Baby Boom</text>
-    </g>
-  </svg>
+## Thinking in Joins
+
+`index.js`:
+~~~javascript
+//Join
+let circles = select("svg")
+  .selectAll("circle")
+  .data(data);
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Presidential debate](http://politics.andyourbrain.com/debate/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-    <g transform="translate(60,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Rap</text>
-    </g>
-    <g transform="translate(85,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="5" font-size="2px">Baby Boom</text>
-    </g>
-    <g transform="translate(25,74)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Debate</text>
-    </g>
-  </svg>
+## Thinking in Joins
+
+`index.js`:
+~~~javascript
+//Join
+let circles = select("svg")
+  .selectAll("circle")
+  .data(data);
+
+let newItems = circles.enter();
+let allItems = circles;
+let oldItems = circles.exit();
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Better Life](http://www.oecdbetterlifeindex.org/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-    <g transform="translate(60,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Rap</text>
-    </g>
-    <g transform="translate(85,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="5" font-size="2px">Baby Boom</text>
-    </g>
-    <g transform="translate(25,74)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Debate</text>
-    </g>
-    <g transform="translate(20,81)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Better life</text>
-    </g>
-  </svg>
+## Thinking in Joins
+
+`index.js`:
+~~~javascript
+//Join
+let circles = select("svg")
+  .selectAll("circle")
+  .data(data);
+
+let newItems = circles.enter();
+let allItems = circles;
+let oldItems = circles.exit();
+
+//Enter
+newItems.append("circle").attr("r", 1);
+//Update
+allItems.attr("r", d => d.value);
+//Exit
+oldItems.remove()
+~~~
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  [Tyske boligpriser](https://interaktiv.morgenpost.de/mieten-grossstaedte-deutschland/)
-  <svg viewBox="0 0 100 100">
-    <rect x="0" y="49" width="100" height="2" fill="#333"/>
-    <rect x="49" y="0" width="2" height="100" fill="#333"/>
-    <text x="0" y="55" font-size="4px">Interaktiv</text>
-    <text x="87" y="55" font-size="4px">Statisk</text>
-    <text x="52" y="3.5" font-size="4px">Forklarende</text>
-    <text x="52" y="99" font-size="4px">Utforskende</text>
-    <g transform="translate(90,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Valgresultat</text>
-    </g>
-    <g transform="translate(90,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Olympics</text>
-    </g>
-    <g transform="translate(5,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Dashboards</text>
-    </g>
-    <g transform="translate(5,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Polygons</text>
-    </g>
-    <g transform="translate(25,15)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Circles</text>
-    </g>
-    <g transform="translate(65,90)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Food</text>
-    </g>
-    <g transform="translate(65,10)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">ML</text>
-    </g>
-    <g transform="translate(70,25)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Making it</text>
-    </g>
-    <g transform="translate(70,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Bussed out</text>
-    </g>
-    <g transform="translate(60,17)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Rap</text>
-    </g>
-    <g transform="translate(85,5)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="5" font-size="2px">Baby Boom</text>
-    </g>
-    <g transform="translate(25,74)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Debate</text>
-    </g>
-    <g transform="translate(20,81)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-5" y="-3" font-size="2px">Better life</text>
-    </g>
-    <g transform="translate(75,75)">
-      <circle cx="0" cy="0" r="2.5" fill="#333" />
-      <text x="-3.5" y="-3" font-size="2px">Boligpriser</text>
-    </g>
-  </svg>
+## Thinking in Joins
+
+`index.js`:
+~~~javascript
+//Join
+let circles = select("svg")
+  .selectAll("circle")
+  .data(data);
+
+let newItems = circles.enter();
+let allItems = circles;
+let oldItems = circles.exit();
+
+//Enter
+newItems.append("circle").attr("r", 1);
+//Update
+allItems.attr("r", d => d.value);
+//Exit
+oldItems.remove()
+~~~
+]
+.right-column[
+Dette utgjør sammen det generelle oppdateringspatternet til D3:
+
+**Join, Enter, Update & Delete**
 ]
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  ### Statisk og Forklarende
-  Vanskelig å treffe en rett konklusjon uten veldig god domenekunnskap og gode modeller, men du får muligheten til å gi hver enkelt bruker det den er ute etter.
+## En start
 
-  ### Statisk og Utforskende
-  Du slipper behovet for nøyaktige modeller eller konklusjoner, men legger mer av arbeidet på brukeren.
-
-  ### Interaktiv og Forklarende
-  Mye det samme som Statisk og Forklarende.
-
-  ### Interaktiv og Utforskende
-  Komplisert å lage, men kraftig. Gir brukeren mulighet til å dekke sitt eget behov.
+Dette er en liten intro til de helt grunnleggende konseptene i D3.
 ]
----
-
-layout: true
-class: middle, center, inverse
-
----
-## Bonuslevel: Abstrakt vs Konkret
 ---
 layout: false
 
 .left-column[
-  ## Hva?
-  ## Hvorfor?
-  ## Hvordan?
-  ## Bonus!
+  ### Hva?
+  ### Hvorfor?
+  ### Hvordan?
+  ### D3
 ]
 .right-column[
-  Vi kan gå i retning abstrakt og omgå hele problemet med nytteverdi 😅
+  ## En start
 
-  - https://medium.muz.li/oddityviz-a-tribute-to-david-bowie-with-data-3566d3bd6bd8
+  Dette er en liten intro til de helt grunnleggende konseptene i D3.
+]
+.right-column[
+  D3 inneholder veldig mange ting, mange fler ting enn vi rekker å gå gjennom i dag.
 
-  - https://vimeo.com/214906816
-
-  - http://www.kultur.design/portfolio/tiger-uncaged/
-
-  - https://codepen.io/teropa/pen/mBbPEe
-
+  Men vi håper at denne lille smaken på D3 gjør at du får nok i bagasjen til å utforske litt på egenhånd.
 ]
 ---
 
-layout: true
-class: middle, center, inverse
+layout: false
 
----
-# Fin.
+**Oppgaver:** https://github.com/bekk/intro-til-d3
+
+* Hver oppgave er en selvstendig mappe med `README.md` og fasit
+
+* Start med nr 0, følg instruksjonene i `README.md`
+
+* Instruktørene kommer til å gå gjennom løsningen på de første oppgavene etter passende tid
+
+* Det du ikke rekker kan du gjøre på egenhånd senere
+
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"> </script>
     <script>var slideshow = remark.create();</script>

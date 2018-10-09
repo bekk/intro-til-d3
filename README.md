@@ -1,6 +1,6 @@
 # Introduksjon til d3.js
 
-Denne workshopen vil ta deg gjennom de grunnleggende prinsippene i [D3.js](https://d3js.org/). Etter workshopen vil du være i stand til å lage enkle visualiseringer i D3.js og kunne nok til å lære deg mer avanserte ting selv. 
+Denne workshopen vil ta deg gjennom de grunnleggende prinsippene i [D3.js](https://d3js.org/). Etter workshopen vil du være i stand til å lage enkle visualiseringer i D3.js og kunne nok til å lære deg mer avanserte ting selv.
 
 Oppgavene finner du [her](https://github.com/bekk/intro-til-d3/tree/master/oppgaver)
 
@@ -12,8 +12,4 @@ Oppgavene finner du [her](https://github.com/bekk/intro-til-d3/tree/master/oppga
 
 For å laste ned en zip av prosjektet [klikk her](https://github.com/bekk/intro-til-d3/archive/master.zip)
 
-
-Slides om Datavisualisering: https://bekk.github.io/intro-til-d3/om-dataviz.html
-
-Slides om D3: https://bekk.github.io/intro-til-d3/om-d3.html
-
+Introslides om Datavisualisering & D3: https://bekk.github.io/intro-til-d3/om-dataviz.html
