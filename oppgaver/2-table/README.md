@@ -106,6 +106,7 @@ selectDiv.selectAll("circle")
 
 * For å lage en `<tr>` i tabellen for hvert innslag i dataene gjør man altså:
 
+
 ```javascript
 const dataTR = d3
   .select(table)
@@ -114,43 +115,7 @@ const dataTR = d3
   .enter()
   .append("tr");
 ```
-
-* For å appende bare tekst, og ikke et DOM-element, bruk `.text((d, i) => "en tekst")`
-
-* D3 kommer med mange nyttige verktøy for datavisualiseringsrelaterte oppgaver. F.eks. `format(<format>)`: https://github.com/d3/d3-format#d3-format
-
-* Måten man bruker `.append` påvirker hierarkiet av elementer:
-
-```javascript
-dataTR
-  .append("foo")
-  .append("foo")
-  .append("foo");
-
-/* resultat:
-<tr>
-    <foo>
-        <foo>
-            <foo />
-        </foo>
-    </foo>
-</tr>
-*/
-```
-
-```javascript
-dataTR.append("foo");
-dataTR.append("foo");
-dataTR.append("foo");
-
-/* resultat:
-<tr>
-    <foo />
-    <foo />
-    <foo />
-</tr>
-*/
-```
+* D3 kommer med mange nyttige verktøy for datavisualiseringsrelaterte oppgaver. F.eks. kan man formatere måten tall skrives ut på med `format(<format>)`: https://github.com/d3/d3-format#d3-format
 
 ## :trophy: Din oppgave
 
