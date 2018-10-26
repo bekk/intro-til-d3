@@ -1,4 +1,4 @@
-# Oppgave 1 - Helt grunnleggende databinding
+# Oppgave 2 - Helt grunnleggende databinding
 
 ## Databinding
 
