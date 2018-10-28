@@ -38,7 +38,7 @@ I denne oppgaven skal vi bruke en vanlig [HTML-tabell](https://developer.mozilla
       <td>27</td>
     </tr>
     <tr>
-      <td>February</td>
+      <td>Kjetil</td>
       <td>27</td>
     </tr>
   </tbody>
