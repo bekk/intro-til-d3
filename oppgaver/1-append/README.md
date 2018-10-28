@@ -81,4 +81,24 @@ Din oppgave blir å konstruere en simpel artikkel med d3 og oppnå et resultat c
 
 <img src="../../img/1-simple-article.png" width="600" />
 
+Html-en bør se ca sånn ut:
+```html
+<body>
+    <article>
+        <h1>
+            Wow for en stor og fin hovedtittel!
+        </h1>
+        <p>
+            Datavisualisering med D3 er <i>kjempegøy!</i>
+        </p>
+        <h2>
+            Hvorfor er undertitler mindre enn hovedtitler?
+        </h2>
+        <p>
+            Wubba Lubba Dub Dub!
+        </p>
+    </article>
+</body>
+```
+
 💡 Tips! Du kan inspisere hvordan nettleseren din tolker html-strukturen på en side ved å høyreklikke et sted på siden og velge _Inspiser_! Dette kan være nyttig hvis du vil verifisere om html-en du genererer med d3 blir som du har tenkt. Inspiser er forøvrig en frontend-utviklers beste venn, og brukes ofte flittig til feilsøking og testing under utvikling av nye web-grensesnitt.
