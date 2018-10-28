@@ -102,3 +102,6 @@ Html-en bør se ca sånn ut:
 ```
 
 💡 Tips! Du kan inspisere hvordan nettleseren din tolker html-strukturen på en side ved å høyreklikke et sted på siden og velge _Inspiser_! Dette kan være nyttig hvis du vil verifisere om html-en du genererer med d3 blir som du har tenkt. Inspiser er forøvrig en frontend-utviklers beste venn, og brukes ofte flittig til feilsøking og testing under utvikling av nye web-grensesnitt.
+
+
+:school_satchel: [Fasit](./src/fasit.js)
