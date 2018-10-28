@@ -22,12 +22,24 @@ const yScale = d3
   .domain([0, dataMax])
   .range([0, height]);
 
+function getColor(value, index) {
+  return index % 2 ? "#3d3d3d" : "#fe9922";
+}
+
+function getXPosition(value, index) {
+    return 10 + index * (barWidth + barMargin)
+}
+
+function getYPosition(value) {
+    return height - yScale(value);
+}
+
 // Legger til søyler
 graph
-  .style("fill", (d, i) => (i % 2 ? "#3d3d3d" : "#fe9922"))
-  .attr("x", (d, i) => 10 + i * (barWidth + barMargin))
-  .attr("y", d => height - yScale(d))
-  .attr("height", d => yScale(d))
+  .style("fill", getColor)
+  .attr("x", getXPosition)
+  .attr("y", getYPosition)
+  .attr("height", yScale)
   .attr("width", barWidth)
 
 const yScaleInverted = yScale.copy().range([height, 0]);

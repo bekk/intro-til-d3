@@ -4,11 +4,15 @@ const radius = (d, i) => 5 + d.value * 2.5;
 
 const t = d3.transition().duration(200);
 
+function getName(value) {
+  return value.name;
+}
+
 // JOIN: bind elementer til data
 const circles = d3
   .select("#svg")
   .selectAll("circle")
-  .data(data, d => d.name);
+  .data(data, getName);
 
 // ENTER: opprett nye elementer når nye data
 circles
@@ -40,12 +44,12 @@ circles
 const text = d3
   .select("#svg")
   .selectAll("text")
-  .data(data, d => d.name);
+  .data(data, getName);
 
 text
   .enter()
   .append("text")
-  .text((d, i) => d.name)
+  .text(getName)
   .attr("x", xCoord)
   .attr("text-anchor", "middle")
   .attr("y", height / 2 - 40);
