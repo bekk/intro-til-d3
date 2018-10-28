@@ -9,32 +9,30 @@ const data = [
 ];
 
 // Entrypoint for d3
-const headerTR = d3.select("#table").append("thead");
 
+const header = d3.select("#table").append("thead");
+const body = d3.select("#table").append("tbody");
+
+const headerTR = header.append("tr");
 headerTR.append("th").text("Name");
-
 headerTR.append("th").text("Hardness");
-
 headerTR.append("th").text("Color");
 
-const dataTbody = d3
-  .select("#table")
-  .append("tbody")
-  .selectAll("tr")
-  .data(data);
+const dataTbody = body.selectAll("tr").data(data);
+const bodyTr = dataTbody.enter().append("tr");
 
-const dataTR = dataTbody.enter().append("tr");
+function getName(value) {
+  return value.name;
+}
 
-dataTR.append("td").text((d, i) => d.name);
+function getHardness(value) {
+  return value.hardness;
+}
 
-const numberFormat = d3.format(".1f");
+function getColor(value) {
+  return value.color;
+}
 
-dataTR
-  .append("td")
-  .attr("class", "number")
-  .text((d, i) => numberFormat(d.hardness));
-
-dataTR
-  .append("td")
-  .attr("style", (d, i) => `color: ${d.color}`)
-  .text((d, i) => d.color);
+bodyTr.append("td").text(getName);
+bodyTr.append("td").text(getHardness);
+bodyTr.append("td").text(getColor).style("color", getColor);
