@@ -90,7 +90,7 @@ selection.style("CSS property", "value");
 
 :trophy: 5. Gi paragrafen `<p class="paragraph" id="paragraph2">Paragraph med unik id og klasse</p>` tekstfargen oransje og skriftstørrelse 40px.
 
-:school_satchel: [Fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/0-selections/src/fasit.js)
+:school_satchel: [Fasit](./src/fasit.js)
 
 Etter å ha fullført de 5 oppgavene vil du ende opp med følgende i nettleseren.
 

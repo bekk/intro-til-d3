@@ -32,4 +32,4 @@ Hver sirkel har en fargenyanse og størrelse iht til sin verdi, og den har navne
 
 :bulb: For å lage forskjellige nyanser av en farge, er det enklere å bruke HSL-fargemodellen i stedet for RGB: `fill="hsl(32, 100%, 50%)"`. Les mer på https://www.w3schools.com/colors/colors_hsl.asp
 
-:school_satchel: [Fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/4-dynamic-data/src/fasit.js)
+:school_satchel: [Fasit](./src/fasit.js)

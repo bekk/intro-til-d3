@@ -213,4 +213,4 @@ Når din tabell er lik nok denne er du ferdig.
 
 <img src="../../img/1-table.png" width="200" />
 
-:school_satchel: Se [fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/1-table/src/fasit.js) for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.
+:school_satchel: Se [fasit](./src/fasit.js) for en mulig løsning og ekstra hint. Det er viktig å huske at det er som regel veldig mange forskjellige måter å lage samme visualisering på.

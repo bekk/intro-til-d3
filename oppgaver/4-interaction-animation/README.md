@@ -77,5 +77,5 @@ Implementer `handleMouseOut` funksjonen. Denne skal tranformere sirkelen tilbake
 :bulb: Man kan fjerne et element med `.remove()`.
 
 
-:school_satchel: [Fasit](https://github.com/bekk/intro-til-d3/blob/master/oppgaver/3-interaction-animation/src/fasit.js)
+:school_satchel: [Fasit](./src/fasit.js)
 
