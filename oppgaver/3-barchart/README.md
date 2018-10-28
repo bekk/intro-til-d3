@@ -1,4 +1,4 @@
-# Oppgave 2 - Bar chart i SVG
+# Oppgave 3 - Bar chart i SVG
 
 Nå skal vi ta disse enkle dataene:
 

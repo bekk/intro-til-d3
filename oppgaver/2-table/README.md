@@ -1,4 +1,4 @@
-# Oppgave 1 - Helt grunnleggende databinding
+# Oppgave 2 - Helt grunnleggende databinding
 
 Oppgaven går ut på å ta disse dataene:
 
