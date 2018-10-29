@@ -206,7 +206,7 @@ selectionWithData.text(getName);
 
 :bulb: Man bestemmer tekstfarge med css property-en [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-:bulb: `.style()` aksepterer både en verdi og en funksjon som andre argument. På samme måte som vi lagde funskjonen `getName` over.
+:bulb: `.style()` aksepterer både en verdi og en funksjon som andre argument. På denne måten kan vi sende med en funksjon for å hente ut `color`, på samme måte som vi hentet ut `name` i `getName` over.
 
 
 Når din tabell er lik nok denne er du ferdig.
